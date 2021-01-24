@@ -44,7 +44,14 @@ class Countdown {
 
 const title = document.querySelector('.title');
 
-const nameOfDay = prompt('Please enter the name of the future event');
+let nameOfDay;
+
+for (let i = 1; i < 2; i += 1) {
+    nameOfDay = prompt('Please enter the name of the future event');  
+    if (nameOfDay === '' || nameOfDay === null) {
+        i -= 1;
+    }
+}
 
 title.textContent = `${nameOfDay} will come in`;
 
