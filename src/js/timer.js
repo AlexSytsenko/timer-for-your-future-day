@@ -60,7 +60,7 @@ let userDate;
 
 for (let i = 1; i < 2; i += 1) {
     userDate = prompt('Please enter the date in format 02-05-2021(month-day-year');  
-    if (userDate === ''|| userDate === null || isNaN(new Date(userDate).getTime()) === true || new Date(userDate).getTime() <= Date.now()) {
+    if (userDate === ''|| userDate === null || isNaN(new Date(userDate).getTime()) === true || new Date(userDate).getTime() <= Date.now() || userDate.length < 6) {
         i -= 1;
     }
 }
